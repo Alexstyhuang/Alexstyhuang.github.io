@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-04-15T05:07:59.882Z</updated>
+  <updated>2021-04-15T06:26:00.054Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,18 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>学位论文的撰写</title>
+    <link href="http://example.com/2021/04/15/%E5%AD%A6%E4%BD%8D%E8%AE%BA%E6%96%87%E7%9A%84%E6%92%B0%E5%86%99/"/>
+    <id>http://example.com/2021/04/15/%E5%AD%A6%E4%BD%8D%E8%AE%BA%E6%96%87%E7%9A%84%E6%92%B0%E5%86%99/</id>
+    <published>2021-04-15T06:15:06.000Z</published>
+    <updated>2021-04-15T06:26:00.054Z</updated>
+    
+    
+    
+    
+    <category term="学习" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="学习" scheme="http://example.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="总结" scheme="http://example.com/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
     <title>扫描隧道显微镜</title>
     <link href="http://example.com/2021/01/20/%E6%89%AB%E6%8F%8F%E9%9A%A7%E9%81%93%E6%98%BE%E5%BE%AE%E9%95%9C/"/>
     <id>http://example.com/2021/01/20/%E6%89%AB%E6%8F%8F%E9%9A%A7%E9%81%93%E6%98%BE%E5%BE%AE%E9%95%9C/</id>
     <published>2021-01-20T02:18:30.000Z</published>
-    <updated>2021-04-15T05:07:59.882Z</updated>
+    <updated>2021-04-15T06:25:27.353Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="扫描隧道显微镜（Scanning-Tunneling-Microscope）"><a href="#扫描隧道显微镜（Scanning-Tunneling-Microscope）" class="headerlink" title="扫描隧道显微镜（Scanning Tunneling Microscope）"></a><strong>扫描隧道显微镜（Scanning Tunneling Microscope）</strong></h1><h2 id="一、课前复习："><a href="#一、课前复习：" class="headerlink" title="一、课前复习："></a>一、课前复习：</h2><p>在介绍扫描隧道显微镜（简称STM）之前，我们先复习一下小学二年级就学过的知识点：</p><p>① <strong>波粒二象性</strong>：在量子力学里，微观粒子有时会显示出波动性（这时粒子性较不显著），有时又会显示出粒子性（这时波动性较不显著），在不同条件下分别表现出波动或粒子的性质[<a href="https://zh.wikipedia.org/wiki/%E6%B3%A2%E7%B2%92%E4%BA%8C%E8%B1%A1%E6%80%A7#%E5%A4%A7%E5%B0%BA%E5%AF%B8%E7%89%A9%E9%AB%94%E7%9A%84%E6%B3%A2%E5%8B%95%E6%80%A7">1</a>]。</p><p>② <strong>量子隧穿效应</strong>：像电子等微观粒子能够穿入或穿越位势垒的量子行为，尽管位势垒的高度大于粒子的总能量[<a href="https://zh.wikipedia.org/wiki/%E9%87%8F%E5%AD%90%E7%A9%BF%E9%9A%A7%E6%95%88%E6%87%89">2</a>]。</p><p>用人话来说：如图1所示，假设一个“狮子”它能跳起的能量高度为E，在他面前有座山高U，已知E&lt;U，在经典力学中，“狮子”不可能越过高山去吃人；而在量子力学中，由于“狮子”呈现波动性，同时由于隧穿效应的存在，“狮子”有一定概率能够直接穿过高山U。</p><p><a href="https://imgchr.com/i/sRhYM8"><img src="https://s3.ax1x.com/2021/01/20/sRhYM8.png" alt="sRhYM8.png"></a></p><p>图1. 隧穿效应示意图</p><h2 id="二、基本原理"><a href="#二、基本原理" class="headerlink" title="二、基本原理"></a>二、基本原理</h2><p><a href="https://imgchr.com/i/sRhtsS"><img src="https://s3.ax1x.com/2021/01/20/sRhtsS.png" alt="sRhtsS.png"></a></p><p>图2. 扫描隧道显微镜示意图</p><p>扫描隧道显微镜就是利用量子隧穿效应制成的，其核心组成部分是<strong>探针针尖</strong>。基本原理是<em>将原子尺度的极细探针和被研究物质的表面作为两个电极，当样品与针尖的距离非常接近(通常小于1nm）时，在外加电场的作用下，电子会穿过这两个电极之间的势垒从一个电极流向另一电极，此时产生的电流称为隧道电流，通过扫描记录下表面上每一点不同的隧道电流，就可以描绘出样品表面的形貌特征</em>[3]。  </p><p>昨天说过STM类似于“<strong>盲人摸象</strong>”。当我们用手触摸原子时，我们可以根据触感分辨出原子大小、高低等信息，而我们在使用STM进行表征时，针尖就是我们的手，此时的触感就是隧道电流的大小，通过建立隧道电流大小与高度（本质上与样品、针尖的态密度有关，比较复杂，这里就不展开）之间的关系就可以描绘出样品形貌特征。有的人手比较粗糙，可能就无法完全分辨出两个原子之间明显的边界；而有的人手可能比较纤细，就可以轻松分辨出原子。根据这个原理，我们知道STM对于针尖的要求极高，通常情况下，针尖前端为锥形，且要求针尖最前端为单个原子，越接近这个形状，针尖的分辨率越高。</p><p>STM有两种工作模式，分别为<strong>恒高模式</strong>和<strong>恒电流模式</strong>。其实从命名上就不难理解这两种模式的区别：恒高模式，顾名思义就是保持探针针尖与样品的高度不变，测量电流的变化从而描绘出形貌特征；恒电流模式，即保持电流大小不变，通过测量高度变化描绘出形貌特征。</p><h2 id="三、应用"><a href="#三、应用" class="headerlink" title="三、应用"></a>三、应用</h2><p><strong>① 扫描形貌</strong></p><p><a href="https://imgchr.com/i/sRH6hQ"><img src="https://s3.ax1x.com/2021/01/20/sRH6hQ.jpg" alt="sRH6hQ.jpg"></a></p><p>图3. 利用STM扫描的Si(111)面</p><p>STM由于针尖尖端独特的形状及其原理，因此具有极高的分辨率，通常用于扫描样品的形貌特征。</p><p><strong>② 微观操作</strong></p><p>sRH6hQ)<br><a href="https://imgchr.com/i/sRHytg"><img src="https://s3.ax1x.com/2021/01/20/sRHytg.jpg" alt="sRHytg.jpg"></a></p><p>图4. 利用STM移动原子组成的“IBM”图形</p><p>昨天分享的视频《A BOY AND HIS ATOM》，其原理就是利用STM移动原子，通过定格动画的形式制作的。</p><p>参考文献：</p><p>[1] 维基百科：波粒二象性</p><p>[2] 维基百科：量子隧穿效应</p><p>[3]《扫描探针显微学》课件——中科大，秦胜勇  </p><p>PS：本人水平有限，仅介绍基本原理，如有错误，恳请大佬批评指正。</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="一、课前复习："><a href="#一、课前复习：" class="headerlink" title="一、课前复习："></a>一、课前复习：</h2><p>在介绍扫描隧道显微镜（简称STM）之前，我们先复习一下小学二年级就学过的知识点：</p><p>① <strong>波粒二象性</strong>：在量子力学里，微观粒子有时会显示出波动性（这时粒子性较不显著），有时又会显示出粒子性（这时波动性较不显著），在不同条件下分别表现出波动或粒子的性质[<a href="https://zh.wikipedia.org/wiki/%E6%B3%A2%E7%B2%92%E4%BA%8C%E8%B1%A1%E6%80%A7#%E5%A4%A7%E5%B0%BA%E5%AF%B8%E7%89%A9%E9%AB%94%E7%9A%84%E6%B3%A2%E5%8B%95%E6%80%A7">1</a>]。</p><p>② <strong>量子隧穿效应</strong>：像电子等微观粒子能够穿入或穿越位势垒的量子行为，尽管位势垒的高度大于粒子的总能量[<a href="https://zh.wikipedia.org/wiki/%E9%87%8F%E5%AD%90%E7%A9%BF%E9%9A%A7%E6%95%88%E6%87%89">2</a>]。</p><p>用人话来说：如图1所示，假设一个“狮子”它能跳起的能量高度为E，在他面前有座山高U，已知E&lt;U，在经典力学中，“狮子”不可能越过高山去吃人；而在量子力学中，由于“狮子”呈现波动性，同时由于隧穿效应的存在，“狮子”有一定概率能够直接穿过高山U。</p><p><a href="https://imgchr.com/i/sRhYM8"><img src="https://s3.ax1x.com/2021/01/20/sRhYM8.png" alt="sRhYM8.png"></a></p><p>图1. 隧穿效应示意图</p><h2 id="二、基本原理"><a href="#二、基本原理" class="headerlink" title="二、基本原理"></a>二、基本原理</h2><p><a href="https://imgchr.com/i/sRhtsS"><img src="https://s3.ax1x.com/2021/01/20/sRhtsS.png" alt="sRhtsS.png"></a></p><p>图2. 扫描隧道显微镜示意图</p><p>扫描隧道显微镜就是利用量子隧穿效应制成的，其核心组成部分是<strong>探针针尖</strong>。基本原理是<em>将原子尺度的极细探针和被研究物质的表面作为两个电极，当样品与针尖的距离非常接近(通常小于1nm）时，在外加电场的作用下，电子会穿过这两个电极之间的势垒从一个电极流向另一电极，此时产生的电流称为隧道电流，通过扫描记录下表面上每一点不同的隧道电流，就可以描绘出样品表面的形貌特征</em>[3]。  </p><p>昨天说过STM类似于“<strong>盲人摸象</strong>”。当我们用手触摸原子时，我们可以根据触感分辨出原子大小、高低等信息，而我们在使用STM进行表征时，针尖就是我们的手，此时的触感就是隧道电流的大小，通过建立隧道电流大小与高度（本质上与样品、针尖的态密度有关，比较复杂，这里就不展开）之间的关系就可以描绘出样品形貌特征。有的人手比较粗糙，可能就无法完全分辨出两个原子之间明显的边界；而有的人手可能比较纤细，就可以轻松分辨出原子。根据这个原理，我们知道STM对于针尖的要求极高，通常情况下，针尖前端为锥形，且要求针尖最前端为单个原子，越接近这个形状，针尖的分辨率越高。</p><p>STM有两种工作模式，分别为<strong>恒高模式</strong>和<strong>恒电流模式</strong>。其实从命名上就不难理解这两种模式的区别：恒高模式，顾名思义就是保持探针针尖与样品的高度不变，测量电流的变化从而描绘出形貌特征；恒电流模式，即保持电流大小不变，通过测量高度变化描绘出形貌特征。</p><h2 id="三、应用"><a href="#三、应用" class="headerlink" title="三、应用"></a>三、应用</h2><p><strong>① 扫描形貌</strong></p><p><a href="https://imgchr.com/i/sRH6hQ"><img src="https://s3.ax1x.com/2021/01/20/sRH6hQ.jpg" alt="sRH6hQ.jpg"></a></p><p>图3. 利用STM扫描的Si(111)面</p><p>STM由于针尖尖端独特的形状及其原理，因此具有极高的分辨率，通常用于扫描样品的形貌特征。</p><p><strong>② 微观操作</strong></p><p>sRH6hQ)<br><a href="https://imgchr.com/i/sRHytg"><img src="https://s3.ax1x.com/2021/01/20/sRHytg.jpg" alt="sRHytg.jpg"></a></p><p>图4. 利用STM移动原子组成的“IBM”图形</p><p>昨天分享的视频《A BOY AND HIS ATOM》，其原理就是利用STM移动原子，通过定格动画的形式制作的。</p><p>参考文献：</p><p>[1] 维基百科：波粒二象性</p><p>[2] 维基百科：量子隧穿效应</p><p>[3]《扫描探针显微学》课件——中科大，秦胜勇  </p><p>PS：本人水平有限，仅介绍基本原理，如有错误，恳请大佬批评指正。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;扫描隧道显微镜（Scanning-Tunneling-Microscope）&quot;&gt;&lt;a href=&quot;#扫描隧道显微镜（Scanning-Tunneling-Microscope）&quot; class=&quot;headerlink&quot; title=&quot;扫描隧道显微镜（Scanning</summary>
+    <summary type="html">&lt;h2 id=&quot;一、课前复习：&quot;&gt;&lt;a href=&quot;#一、课前复习：&quot; class=&quot;headerlink&quot; title=&quot;一、课前复习：&quot;&gt;&lt;/a&gt;一、课前复习：&lt;/h2&gt;&lt;p&gt;在介绍扫描隧道显微镜（简称STM）之前，我们先复习一下小学二年级就学过的知识点：&lt;/p&gt;
+&lt;p&gt;① </summary>
       
     
     
@@ -45,16 +65,16 @@
     <link href="http://example.com/2020/04/26/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%9301/"/>
     <id>http://example.com/2020/04/26/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%9301/</id>
     <published>2020-04-26T08:21:49.000Z</published>
-    <updated>2020-04-27T13:18:54.643Z</updated>
+    <updated>2021-04-15T06:24:08.359Z</updated>
     
-    <content type="html"><![CDATA[<p><strong><br><font size=6><center>Python学习总结01</center></font></strong><br></p><p><strong><font size=5>数据类型之字符串：</font><br></strong></p><p>format()方法格式化数字时特殊格式</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;:<span class="number">.2</span>f&#125;：表示保留两位小数。</span><br><span class="line"></span><br><span class="line">&#123;:<span class="number">.2</span>e&#125;：表示保留两位小数点的指数。</span><br><span class="line"></span><br><span class="line">&#123;:<span class="number">.2</span>%&#125;：表示保留两位小数点的百分比。</span><br><span class="line"></span><br><span class="line">&#123;:,&#125;：表示以逗号分隔数字，如<span class="number">2</span>,<span class="number">222</span>,<span class="number">222</span>。</span><br><span class="line"></span><br><span class="line">&#123;:*&gt;10d&#125;：表示用*填充数字，使总宽度为<span class="number">10</span>，并且向右对齐，&gt;为右对齐，&lt;为左对齐，^为中间对齐。</span><br><span class="line"></span><br><span class="line">&#123;:b&#125;：二进制数，若想输出结果时前加格式0b，则格式化为&#123;:<span class="comment">#b&#125;。</span></span><br><span class="line"></span><br><span class="line">&#123;:o&#125;：八进制数，若想输出结果时前加格式0o，则格式化为&#123;:<span class="comment">#o&#125;。</span></span><br><span class="line"></span><br><span class="line">&#123;:x&#125;：十六进制数，若想输出结果时前加格式0x，则格式化为&#123;:<span class="comment">#x&#125;。</span></span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p><strong><font size=5>数据类型之字符串：</font><br></strong></p><p>format()方法格式化数字时特殊格式</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;:<span class="number">.2</span>f&#125;：表示保留两位小数。</span><br><span class="line"></span><br><span class="line">&#123;:<span class="number">.2</span>e&#125;：表示保留两位小数点的指数。</span><br><span class="line"></span><br><span class="line">&#123;:<span class="number">.2</span>%&#125;：表示保留两位小数点的百分比。</span><br><span class="line"></span><br><span class="line">&#123;:,&#125;：表示以逗号分隔数字，如<span class="number">2</span>,<span class="number">222</span>,<span class="number">222</span>。</span><br><span class="line"></span><br><span class="line">&#123;:*&gt;10d&#125;：表示用*填充数字，使总宽度为<span class="number">10</span>，并且向右对齐，&gt;为右对齐，&lt;为左对齐，^为中间对齐。</span><br><span class="line"></span><br><span class="line">&#123;:b&#125;：二进制数，若想输出结果时前加格式0b，则格式化为&#123;:<span class="comment">#b&#125;。</span></span><br><span class="line"></span><br><span class="line">&#123;:o&#125;：八进制数，若想输出结果时前加格式0o，则格式化为&#123;:<span class="comment">#o&#125;。</span></span><br><span class="line"></span><br><span class="line">&#123;:x&#125;：十六进制数，若想输出结果时前加格式0x，则格式化为&#123;:<span class="comment">#x&#125;。</span></span><br></pre></td></tr></table></figure>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;&lt;strong&gt;&lt;br&gt;&lt;font size=6&gt;&lt;center&gt;Python学习总结01&lt;/center&gt;&lt;/font&gt;&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;font size=5&gt;数据类型之字符串：&lt;/font&gt;&lt;br&gt;&lt;/strong&gt;&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;&lt;font size=5&gt;数据类型之字符串：&lt;/font&gt;&lt;br&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;format()方法格式化数字时特殊格式&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=</summary>
       
     
     
@@ -75,15 +95,15 @@
     <link href="http://example.com/2020/03/14/%E6%88%91%E4%B8%8E%E7%BE%8E%E4%B8%BD%E7%9A%84%E4%B8%80%E5%A4%A9/"/>
     <id>http://example.com/2020/03/14/%E6%88%91%E4%B8%8E%E7%BE%8E%E4%B8%BD%E7%9A%84%E4%B8%80%E5%A4%A9/</id>
     <published>2020-03-14T07:18:30.000Z</published>
-    <updated>2020-04-26T09:34:54.878Z</updated>
+    <updated>2021-04-15T06:23:52.326Z</updated>
     
-    <content type="html"><![CDATA[<p><strong><br><font size=6><center>美丽的一周年礼物</center></font></strong></p><p>今天是2020年3月14日星期六，离我跟美丽在一起500天还有两天。<br><br>给大家晒一下一周年的时候美丽送我的礼物~<br><br></p><center><font color=#1E90FF size=6 face="黑体">全球唯一纯手工定制款AJ11白蛇！</font></center><img src="/img/xie.jpg"> <br><center>    <font color=#1E90FF size=5 face="黑体">我</font>    <font color=#1E90FF size=5 face="黑体">爱</font    ><font color=#1E90FF size=5 face="黑体">美</font>    <font color=#1E90FF size=5 face="黑体">丽！</font></center>]]></content>
+    <content type="html"><![CDATA[<p>今天是2020年3月14日星期六，离我跟美丽在一起500天还有两天。<br><br>给大家晒一下一周年的时候美丽送我的礼物~<br><br></p><center><font color=#1E90FF size=6 face="黑体">全球唯一纯手工定制款AJ11白蛇！</font></center><img src="/img/xie.jpg"> <br><center>    <font color=#1E90FF size=5 face="黑体">我</font>    <font color=#1E90FF size=5 face="黑体">爱</font    ><font color=#1E90FF size=5 face="黑体">美</font>    <font color=#1E90FF size=5 face="黑体">丽！</font></center>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;&lt;strong&gt;&lt;br&gt;&lt;font size=6&gt;&lt;center&gt;美丽的一周年礼物&lt;/center&gt;&lt;/font&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;今天是2020年3月14日星期六，离我跟美丽在一起500天还有两天。&lt;br&gt;&lt;br&gt;给大家晒一下一周年的时候美丽送我的礼物~&lt;</summary>
+    <summary type="html">&lt;p&gt;今天是2020年3月14日星期六，离我跟美丽在一起500天还有两天。&lt;br&gt;&lt;br&gt;给大家晒一下一周年的时候美丽送我的礼物~&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;center&gt;&lt;font color=#1E90FF size=6 face=&quot;黑体&quot;&gt;全球唯一纯手工定制款AJ11白蛇！</summary>
       
     
     
@@ -100,17 +120,19 @@
     <link href="http://example.com/2019/11/27/hello-world/"/>
     <id>http://example.com/2019/11/27/hello-world/</id>
     <published>2019-11-27T00:58:54.000Z</published>
-    <updated>2020-04-26T09:29:26.334Z</updated>
+    <updated>2021-04-15T06:24:04.603Z</updated>
     
-    <content type="html"><![CDATA[<p><strong><br><font size=6><center>手机摄影01</center></font></strong></p><p>po一些以前用手机拍的照片把<br></p><center>与室友某年青海湖国庆游</center><img src="/img/7.jpg"><center>光影</center><img src="/img/2.jpg"><center>月上云梢</center><img src="/img/3.jpg"><center>造楼（1）</center><img src="/img/4.jpg"><center>造楼（2）</center><img src="/img/5.jpg"><center>孤独旅人</center><img src="/img/6.jpg"><center>西湖</center><img src="/img/8.jpg">]]></content>
+    <content type="html"><![CDATA[<p>po一些以前用手机拍的照片把<br></p><center>与室友某年青海湖国庆游</center><img src="/img/7.jpg"><center>光影</center><img src="/img/2.jpg"><center>月上云梢</center><img src="/img/3.jpg"><center>造楼（1）</center><img src="/img/4.jpg"><center>造楼（2）</center><img src="/img/5.jpg"><center>孤独旅人</center><img src="/img/6.jpg"><center>西湖</center><img src="/img/8.jpg">]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;&lt;strong&gt;&lt;br&gt;&lt;font size=6&gt;&lt;center&gt;手机摄影01&lt;/center&gt;&lt;/font&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;po一些以前用手机拍的照片把&lt;br&gt;&lt;/p&gt;
+    <summary type="html">&lt;p&gt;po一些以前用手机拍的照片把&lt;br&gt;&lt;/p&gt;
 &lt;center&gt;与室友某年青海湖国庆游&lt;/center&gt;
-&lt;img src=&quot;/im</summary>
+&lt;img src=&quot;/img/7.jpg&quot;&gt;
+&lt;center&gt;光影&lt;/center&gt;
+&lt;img src=&quot;/img/2.jpg&quot;&gt;
+&lt;center&gt;月上云梢&lt;/cente</summary>
       
     
     
@@ -127,14 +149,17 @@
     <link href="http://example.com/2019/11/26/Welcome-to-my-blog/"/>
     <id>http://example.com/2019/11/26/Welcome-to-my-blog/</id>
     <published>2019-11-26T00:58:54.000Z</published>
-    <updated>2020-05-15T11:49:05.490Z</updated>
+    <updated>2021-04-15T06:24:47.220Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Welcome-to-my-blog"><a href="#Welcome-to-my-blog" class="headerlink" title="Welcome to my blog"></a>Welcome to my blog</h1><center>This is my first blog....</center><p>记忆力不好，留点hexo命令提醒自己：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;postName&quot; #新建文章 </span><br><span class="line">hexo new page &quot;pageName&quot; #新建页面</span><br><span class="line">hexo generate #生成静态页面至public目录</span><br><span class="line">hexo server #开启预览访问端口（默认端口4000，&#39;ctrl + c&#39;关闭server）</span><br><span class="line">hexo deploy #将.deploy目录部署到GitHub</span><br><span class="line">hexo help  # 查看帮助</span><br><span class="line">hexo version  #查看Hexo的版本</span><br><span class="line">hexo deploy -g  #生成加部署</span><br><span class="line">hexo server -g  #生成加预览</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<center>This is my first blog....</center><p>记忆力不好，留点hexo命令提醒自己：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;postName&quot; #新建文章 </span><br><span class="line">hexo new page &quot;pageName&quot; #新建页面</span><br><span class="line">hexo generate #生成静态页面至public目录</span><br><span class="line">hexo server #开启预览访问端口（默认端口4000，&#39;ctrl + c&#39;关闭server）</span><br><span class="line">hexo deploy #将.deploy目录部署到GitHub</span><br><span class="line">hexo help  # 查看帮助</span><br><span class="line">hexo version  #查看Hexo的版本</span><br><span class="line">hexo deploy -g  #生成加部署</span><br><span class="line">hexo server -g  #生成加预览</span><br></pre></td></tr></table></figure>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;Welcome-to-my-blog&quot;&gt;&lt;a href=&quot;#Welcome-to-my-blog&quot; class=&quot;headerlink&quot; title=&quot;Welcome to my blog&quot;&gt;&lt;/a&gt;Welcome to my blog&lt;/h1&gt;&lt;center&gt;T</summary>
+    <summary type="html">&lt;center&gt;This is my first blog....&lt;/center&gt;
+
+&lt;p&gt;记忆力不好，留点hexo命令提醒自己：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;s</summary>
       
     
     
