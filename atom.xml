@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-04-15T08:08:33.561Z</updated>
+  <updated>2021-09-16T07:26:55.177Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>工作第77天</title>
+    <link href="http://example.com/2021/09/16/%E5%B7%A5%E4%BD%9C%E7%AC%AC%E4%B8%80%E7%99%BE%E5%A4%A9/"/>
+    <id>http://example.com/2021/09/16/%E5%B7%A5%E4%BD%9C%E7%AC%AC%E4%B8%80%E7%99%BE%E5%A4%A9/</id>
+    <published>2021-09-16T07:21:45.000Z</published>
+    <updated>2021-09-16T07:26:55.177Z</updated>
+    
+    <content type="html"><![CDATA[<p>2021年7月1日，正式入职了，到今天，总计77天。<br>工作性质很特殊，第一个月写了一个月的项目书，<br>第二个月开始设计点技术，但是不深，公司什么都没有，什么都干不成。<br>第三个月，村里打电话让我回去当大学生村官，笑死哈哈哈。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;2021年7月1日，正式入职了，到今天，总计77天。&lt;br&gt;工作性质很特殊，第一个月写了一个月的项目书，&lt;br&gt;第二个月开始设计点技术，但是不深，公司什么都没有，什么都干不成。&lt;br&gt;第三个月，村里打电话让我回去当大学生村官，笑死哈哈哈。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="日常" scheme="http://example.com/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+    <category term="rubbish" scheme="http://example.com/tags/rubbish/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows下使用github搭建个人博客</title>
