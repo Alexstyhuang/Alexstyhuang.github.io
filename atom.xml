@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-09-16T07:26:55.000Z</updated>
+  <updated>2022-05-11T12:17:28.930Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,124 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【python】自动发送微信消息或文件</title>
+    <link href="http://example.com/2022/05/11/%E3%80%90python%E3%80%91%E8%87%AA%E5%8A%A8%E5%8F%91%E9%80%81%E5%BE%AE%E4%BF%A1%E6%B6%88%E6%81%AF%E6%88%96%E6%96%87%E4%BB%B6/"/>
+    <id>http://example.com/2022/05/11/%E3%80%90python%E3%80%91%E8%87%AA%E5%8A%A8%E5%8F%91%E9%80%81%E5%BE%AE%E4%BF%A1%E6%B6%88%E6%81%AF%E6%88%96%E6%96%87%E4%BB%B6/</id>
+    <published>2022-05-11T12:17:07.000Z</published>
+    <updated>2022-05-11T12:17:28.930Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>通过wxauto和pyautogui库实现</strong></p><p>1、安装wxauto和pyautogui库，pip安装即可。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install wxauto</span><br><span class="line">pip install pyautogui</span><br></pre></td></tr></table></figure><p>2、登录微信。</p><p>3、获取返回桌面的位置及微信快捷方式在桌面的位置。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> turtle <span class="keyword">import</span> position</span><br><span class="line"><span class="keyword">import</span> pyautogui, sys</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;press ctrl-c to quit.&quot;</span>)</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        x, y = pyautogui.position()</span><br><span class="line">        positionStr = <span class="string">&quot;X: &quot;</span> + <span class="built_in">str</span>(x).rjust(<span class="number">4</span>) + <span class="string">&quot;Y: &quot;</span> + <span class="built_in">str</span>(y).rjust(<span class="number">4</span>)</span><br><span class="line">        <span class="built_in">print</span>(positionStr, end=<span class="string">&quot;&quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;\b&quot;</span> * <span class="built_in">len</span>(positionStr),end=<span class="string">&quot;&quot;</span>, flush=<span class="literal">True</span>)</span><br><span class="line"><span class="keyword">except</span> KeyboardInterrupt:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;\n&#x27;</span>)</span><br></pre></td></tr></table></figure><p>4、修改pyautogui库的操作，即修改代码中的click和doubleclick的像素位置。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> wxauto <span class="keyword">import</span> WeChat</span><br><span class="line"><span class="keyword">import</span> pyautogui, sys</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;请输入发送人的备注：&#x27;</span>)</span><br><span class="line">who = <span class="built_in">input</span>()</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;请输入推迟打开微信时间(s):&quot;</span>)</span><br><span class="line">t_delay1 = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;请输入推迟发送时间(s):&quot;</span>)</span><br><span class="line">t_delay2 = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;请选择发送消息还是文件:1.消息, 2.文件。输入1或2。&quot;</span>)</span><br><span class="line">chattype = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> chattype == <span class="number">1</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;请输入发送的消息：&quot;</span>)</span><br><span class="line">    chat_message = <span class="built_in">input</span>()</span><br><span class="line"><span class="keyword">elif</span> chattype == <span class="number">2</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;请输入文件的路径：&quot;</span>)</span><br><span class="line">    chat_file_path = <span class="built_in">input</span>()</span><br><span class="line"></span><br><span class="line">time.sleep(t_delay1)    <span class="comment">#推迟打开微信时间</span></span><br><span class="line"></span><br><span class="line">pyautogui.click(<span class="number">2559</span>,<span class="number">1405</span>)      <span class="comment">#返回桌面---此处需要自己获取位置</span></span><br><span class="line">pyautogui.doubleClick(<span class="number">38</span>,<span class="number">1143</span>)  <span class="comment">#打开微信---此处需要自己获取位置</span></span><br><span class="line"></span><br><span class="line">wx = WeChat()  <span class="comment">#获取当前微信客户端</span></span><br><span class="line"></span><br><span class="line">wx.GetSessionList()     <span class="comment"># 获取会话列表</span></span><br><span class="line">wx.ChatWith(who)</span><br><span class="line"></span><br><span class="line">time.sleep(t_delay2)    <span class="comment">#推迟发送时间</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> chattype == <span class="number">1</span>:</span><br><span class="line">    wx.SendMsg(chat_message)</span><br><span class="line"><span class="keyword">elif</span> chattype == <span class="number">2</span>:</span><br><span class="line">    wx.SendFiles(chat_file_path)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;通过wxauto和pyautogui库实现&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1、安装wxauto和pyautogui库，pip安装即可。&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;g</summary>
+      
+    
+    
+    
+    <category term="学习" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="学习" scheme="http://example.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="总结" scheme="http://example.com/tags/%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【python】自动获取鼠标位置</title>
+    <link href="http://example.com/2022/05/11/%E3%80%90python%E3%80%91%E8%87%AA%E5%8A%A8%E8%8E%B7%E5%8F%96%E9%BC%A0%E6%A0%87%E4%BD%8D%E7%BD%AE/"/>
+    <id>http://example.com/2022/05/11/%E3%80%90python%E3%80%91%E8%87%AA%E5%8A%A8%E8%8E%B7%E5%8F%96%E9%BC%A0%E6%A0%87%E4%BD%8D%E7%BD%AE/</id>
+    <published>2022-05-11T12:16:25.000Z</published>
+    <updated>2022-05-11T12:16:42.809Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>通过pyautogui这个库来实现。</strong></p><p> 1、安装pyautogui库，通过pip安装即可</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pyautogui</span><br></pre></td></tr></table></figure><p> 2、具体代码：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> turtle <span class="keyword">import</span> position</span><br><span class="line"><span class="keyword">import</span> pyautogui, sys</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;press ctrl-c to quit.&quot;</span>)</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        x, y = pyautogui.position()</span><br><span class="line">        positionStr = <span class="string">&quot;X: &quot;</span> + <span class="built_in">str</span>(x).rjust(<span class="number">4</span>) + <span class="string">&quot;Y: &quot;</span> + <span class="built_in">str</span>(y).rjust(<span class="number">4</span>)</span><br><span class="line">        <span class="built_in">print</span>(positionStr, end=<span class="string">&quot;&quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;\b&quot;</span> * <span class="built_in">len</span>(positionStr),end=<span class="string">&quot;&quot;</span>, flush=<span class="literal">True</span>)</span><br><span class="line"><span class="keyword">except</span> KeyboardInterrupt:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;\n&#x27;</span>)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;通过pyautogui这个库来实现。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt; 1、安装pyautogui库，通过pip安装即可&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="学习" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="学习" scheme="http://example.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="总结" scheme="http://example.com/tags/%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《基础知识系列》-位（bit）、字节（byte）、字（word）、KB、MB、GB、TB</title>
+    <link href="http://example.com/2022/05/11/%E3%80%8A%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%B3%BB%E5%88%97%E3%80%8B-%E4%BD%8D%EF%BC%88bit%EF%BC%89%E3%80%81%E5%AD%97%E8%8A%82%EF%BC%88byte%EF%BC%89%E3%80%81%E5%AD%97%EF%BC%88word%EF%BC%89%E3%80%81KB%E3%80%81MB%E3%80%81GB%E3%80%81TB/"/>
+    <id>http://example.com/2022/05/11/%E3%80%8A%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%B3%BB%E5%88%97%E3%80%8B-%E4%BD%8D%EF%BC%88bit%EF%BC%89%E3%80%81%E5%AD%97%E8%8A%82%EF%BC%88byte%EF%BC%89%E3%80%81%E5%AD%97%EF%BC%88word%EF%BC%89%E3%80%81KB%E3%80%81MB%E3%80%81GB%E3%80%81TB/</id>
+    <published>2022-05-11T12:15:34.000Z</published>
+    <updated>2022-05-11T12:15:55.941Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="一、定义"><a href="#一、定义" class="headerlink" title="一、定义"></a>一、定义</h2><p><strong>1、位/比特（bit）：</strong></p><p>位/比特（bit）是计算机中<strong>最小的数据存储单位</strong>。二进制中每一位的状态只能是0或1。</p><p><strong>2、字节（byte）：</strong></p><p>字节（byte）由8位（bit）组成，是<strong>存储空间的基本计量单位</strong>，通常1个字节可以存储半个汉字或1个英文字母。</p><p><strong>3、字（word）：</strong></p><p>字（word）是计算机进行数据存储、处理和运算的单位，由若干个字节（byte）组成。字的位数叫字长，不同处理器性能的计算机中字长不同，例如32位处理器中，1字=32位=4字节，64位处理器中，1字=64位=8字节。</p><h2 id="二、相互转换"><a href="#二、相互转换" class="headerlink" title="二、相互转换"></a>二、相互转换</h2><p>1B（byte，字节）= 8 bit；</p><p>1KB（Kibibyte，千字节）=1024B= 2^10 B；</p><p>1MB（Mebibyte，兆字节，百万字节，简称“兆”）=1024KB= 2^20 B；</p><p>1GB（Gibibyte，吉字节，十亿字节，又称“千兆”）=1024MB= 2^30 B；</p><p>1TB（Tebibyte，万亿字节，太字节）=1024GB= 2^40 B；</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;一、定义&quot;&gt;&lt;a href=&quot;#一、定义&quot; class=&quot;headerlink&quot; title=&quot;一、定义&quot;&gt;&lt;/a&gt;一、定义&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;1、位/比特（bit）：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;位/比特（bit）是计算机中&lt;strong&gt;最小的</summary>
+      
+    
+    
+    
+    <category term="学习" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="学习" scheme="http://example.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="总结" scheme="http://example.com/tags/%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【python】python3安装worldcloud库</title>
+    <link href="http://example.com/2022/05/11/%E3%80%90python%E3%80%91python3%E5%AE%89%E8%A3%85worldcloud%E5%BA%93/"/>
+    <id>http://example.com/2022/05/11/%E3%80%90python%E3%80%91python3%E5%AE%89%E8%A3%85worldcloud%E5%BA%93/</id>
+    <published>2022-05-11T12:13:48.000Z</published>
+    <updated>2022-05-11T12:14:25.305Z</updated>
+    
+    <content type="html"><![CDATA[<p> <strong>1. 查看python版本：</strong><br>win+r 打开cmd 输入 python –version回车</p><p> <strong>2. 根据python版本选择对应的词云版本：</strong><br>例如cp310代表python3.10的版本</p><p> <strong>3. 从<a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#wordcloud">https://www.lfd.uci.edu/~gohlke/pythonlibs/#wordcloud</a> 下载对应的词云库</strong><br>例如wordcloud‑1.8.1‑cp310‑cp310‑win_amd64.whl<br>注意选择电脑位数，通常为64位，即amd64</p><p> <strong>4. 在python script目录下cmd命令：</strong><br>pip install wordcloud-1.8.1-cp39-cp39-win_amd64.whl 回车</p><p>Successfully installed wordcloud-1.8.1表示成功安装。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt; &lt;strong&gt;1. 查看python版本：&lt;/strong&gt;&lt;br&gt;win+r 打开cmd 输入 python –version回车&lt;/p&gt;
+&lt;p&gt; &lt;strong&gt;2. 根据python版本选择对应的词云版本：&lt;/strong&gt;&lt;br&gt;例如cp310代表python3</summary>
+      
+    
+    
+    
+    <category term="学习" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="学习" scheme="http://example.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="总结" scheme="http://example.com/tags/%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>工作第77天</title>
